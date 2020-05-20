@@ -1,6 +1,22 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background-color: #FF7977;
+  background-color: #ff7a7a;
   background-image: url("../images/bg-intro-desktop.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 input[type=text], input[type=email], input[type=password] {
@@ -16,7 +32,7 @@ input[type=text], input[type=email], input[type=password] {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #38cc8c;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -26,17 +42,19 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #38cc8c;
 }
 
 /*.side{
       text-align: left;
   }*/
 .header {
-  background-color: #f1f1f1;
+  background-color: #6055a5;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
+  top: 450px;
+  right: 50px;
 }
 
 .form {
@@ -54,7 +72,7 @@ p {
 }
 
 a {
-  color: #F90F0F;
+  color: #ff7a7a;
   text-decoration: none;
 }
 

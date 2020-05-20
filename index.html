@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/styles.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
@@ -35,56 +36,16 @@
         <p>By clicking the button you are agreeing to our <a>Terms and Services</a></p>
     </form>
       </div>
+     <div class="footer">
+        <footer>
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Your Name Here</a>.
+          </p>
+        </footer>
+     </div> 
       <script>
-        document.getElementById("myForm").onsubmit = function () {
-                var w = document.forms["myForm"]["firstname"].value;
-                var x = document.forms["myForm"]["lastname"].value;
-                var y = document.forms["myForm"]["email"].value;
-                var z = document.forms["myForm"]["password"].value;
-            
-                var submit = true;
-            
-                if (w == null || w == "") {
-                    nameError = "Fisrt name cannot be empty";
-                    document.getElementById("firstname_error").innerHTML = firstnameError;
-                    submit = false;
-                }
-                if (x == null || x == "") {
-                    nameError = "Lsst name cannot be empty";
-                    document.getElementById("lastname_error").innerHTML = lastnameError;
-                    submit = false;
-                }
-                if (y == null || y == "") {
-                    emailError = "Looks like this is not an email";
-                    document.getElementById("email_error").innerHTML = emailError;
-                    submit = false;
-                }
-            
-                if (z == null || z == "") {
-                    telephoneError = "Password cannot be empty";
-                    document.getElementById("password_error").innerHTML = passwordError;
-                    submit = false;
-                }
-            
-                return submit;
-            }
-            
-            function removeWarning() {
-                document.getElementById(this.id + "_error").innerHTML = "";
-            }
-            
-            document.getElementById("firstname").onkeyup = removeWarning;
-            document.getElementById("lastname").onkeyup = removeWarning;
-            document.getElementById("email").onkeyup = removeWarning;
-            document.getElementById("password").onkeyup = removeWarning;
-        
         </script>
 </body>
 
-<footer>
-  <p class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </p>
-</footer>
 </html>
