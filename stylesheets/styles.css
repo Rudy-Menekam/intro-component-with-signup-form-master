@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400, 500, 600, 700");
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype"), url("fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,17 +15,8 @@
 body {
   background-color: #ff7a7a;
   background-image: url("../images/bg-intro-desktop.png");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
-  margin: 0;
+  font-size: 16px;
+  font-family: 'Poppins';
 }
 
 input[type=text], input[type=email], input[type=password] {
@@ -45,16 +45,44 @@ input[type=submit]:hover {
   background-color: #38cc8c;
 }
 
-/*.side{
-      text-align: left;
-  }*/
+.container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.child1 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
 .header {
   background-color: #6055a5;
   padding: 10px;
-  text-align: center;
   border-radius: 5px;
-  top: 450px;
-  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header p {
+  color: white;
+  text-align: center;
 }
 
 .form {
@@ -68,20 +96,11 @@ h2 {
 }
 
 p {
-  text-align: center;
+  font-size: 15px;
 }
 
 a {
   color: #ff7a7a;
   text-decoration: none;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
 }
 /*# sourceMappingURL=styles.css.map */

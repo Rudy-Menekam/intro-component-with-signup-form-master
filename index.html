@@ -5,45 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/styles.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body>
-  <div class="side">
+  <div class="container">
+  <div class="child1">
     <h2>Learn to code by<br>watching others
     </h2>
     <h5>See how experienced developers solve problems in real-time.<br>Wactching scripted tutorials is great,but understanding how<br>
     developers think is invaluable. </h5>
   </div>
+  <div class="child2">
   <div class="header">
       <p><a style="color: white;">Try it  for free</a> then $20/mo.thereafter  </p>
     </div>
-    <br><br>
+    <br>
     <div class="form">
       <form name="myForm" id="myForm">
-        <input type="text" id="firstname" name="firstname" aria-describedby="name-format" placeholder="First Name"> 
-        <span class="error"><p id="firstname_error"></p></span>
-        <input type="text" id="lastname" name="lastname" aria-describedby="name-format" placeholder="Last Name"> 
-        <span class="error"><p id="lastname_error"></p></span>
-        <input type="email" id="email" name="email" placeholder="Email Address"> 
-        <span class="error"><p id="email_error"></p></span>
+        <div class="form-control">
+          <input type="text" id="firstname" name="firstname" aria-describedby="name-format" placeholder="First Name"> 
+        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
+        <small>error_message</small></div>
+       <div class="form-control"> 
+         <input type="text" id="lastname" name="lastname" aria-describedby="name-format" placeholder="Last Name"> 
+        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
+        <small>error_message</small></div>
+        <div class="form-control">
+          <input type="email" id="email" name="email" placeholder="Email Address"> 
+        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
+        <small>error_message</small></div>
     
-        <input type="password" id="password" name="password" placeholder="Password"> 
-        <span class="error"><p id="password_error"></p></span>
+        <div class="form-control">
+          <input type="password" id="password" name="password" placeholder="Password"> 
+        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
+        <small>error_message</small></div>
     
         <input class="register_button" type="submit" value="CLAIM YOUR FREE TRIAL">
         <p>By clicking the button you are agreeing to our <a>Terms and Services</a></p>
     </form>
       </div>
-     <div class="footer">
-        <footer>
-          <p class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Your Name Here</a>.
-          </p>
-        </footer>
-     </div> 
+  </div>
+  </div>
       <script>
         </script>
 </body>

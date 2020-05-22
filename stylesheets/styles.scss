@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400, 500, 600, 700');
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
 
 *{
   box-sizing: border-box;
@@ -5,17 +8,15 @@
 body{
     background-color: hsl(0, 100%, 74%);
     background-image: url('../images/bg-intro-desktop.png');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins';
+    
  }
  input[type=text],input[type=email],input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -35,33 +36,59 @@ body{
   input[type=submit]:hover {
     background-color: hsl(154, 59%, 51%);
   }
+  .container{
+   flex-direction:row;
+   flex: 3;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   min-height: 100vh;
+   margin: 0;
+  }
   
-  
-  /*.side{
-      text-align: left;
-  }*/
+  .child1{
+    font-size: 20px;
+    color: #FFFFFF;
+  }
   .header {
     background-color: hsl(248, 32%, 49%);
     padding: 10px;
-    text-align: center;
     border-radius: 5px;
-    top: 450px;
-    right: 50px;
+    display: flex;
+  }
+  .header p{
+    color: white;
+    text-align: center;
   }
   .form {
     border-radius: 5px;
     background-color: #FFFFFF;
     padding: 20px;
+    display: block;
+  }
+  .form-control{
+    position: relative;
+  }
+  .form-control i{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+  }
+  .form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   h2{
       color: white;
   }
   p{
-      text-align: center
+      
+      font-size: 15px;
   }
   a {
       color: hsl(0, 100%, 74%);
       text-decoration: none;
   }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+   
