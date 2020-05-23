@@ -24,22 +24,43 @@
     <div class="form">
       <form name="myForm" id="myForm">
         <div class="form-control">
-          <input type="text" id="firstname" name="firstname" aria-describedby="name-format" placeholder="First Name"> 
-        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
-        <small>error_message</small></div>
-       <div class="form-control"> 
-         <input type="text" id="lastname" name="lastname" aria-describedby="name-format" placeholder="Last Name"> 
-        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
-        <small>error_message</small></div>
-        <div class="form-control">
-          <input type="email" id="email" name="email" placeholder="Email Address"> 
-        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
-        <small>error_message</small></div>
+          <input type="text" id="firstname" name="firstname" aria-describedby="name-format" placeholder="First Name">
+            <div class="icon" style="display: flex; justify-content: flex-end">
+              <i class="fa fa-exclamation-circle">
+                <img src="./images/icon-error.svg"></img>
+              </i>
+              <label>error_message</label>
+            </div>
+          <div>
+            <div class="form-control">
+              <input type="text" id="lastname" name="lastname" aria-describedby="name-format" placeholder="Last Name">
+                <div class="icon" style="display: flex; justify-content: flex-end">
+                  <i class="fa fa-exclamation-circle">
+                    <img src="./images/icon-error.svg"></img>
+                  </i>
+                  <label>error_message</label>
+                </div>
+              <div>
+                <div class="form-control">
+                  <input type="email" id="email" name="email" aria-describedby="email-format" placeholder="Email Address">
+                    <div class="icon" style="display: flex; justify-content: flex-end">
+                      <i class="fa fa-exclamation-circle">
+                        <img src="./images/icon-error.svg"></img>
+                      </i>
+         
+                      <label>error_message</label>
+                    </div>
+                  <div>
     
-        <div class="form-control">
-          <input type="password" id="password" name="password" placeholder="Password"> 
-        <i class="fa fa-exclamation-circle"><img src="./images/icon-error.svg"></img></i>
-        <small>error_message</small></div>
+                    <div class="form-control">
+                      <input type="password" id="password" name="password" aria-describedby="password-format" placeholder="Password">
+                        <div class="icon" style="display: flex; justify-content: flex-end">
+                          <i class="fa fa-exclamation-circle">
+                            <img src="./images/icon-error.svg"></img>
+                          </i>
+                          <label>error_message</label>
+                        </div>
+                      <div>
     
         <input class="register_button" type="submit" value="CLAIM YOUR FREE TRIAL">
         <p>By clicking the button you are agreeing to our <a>Terms and Services</a></p>
@@ -47,8 +68,72 @@
       </div>
   </div>
   </div>
-      <script>
-        </script>
+  <script>
+    const myForm = document.getElementById('myForm');
+    const firstname = document.getElementById('fristname');
+    const lastname = document.getElementById('lastname');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    myForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          checkInputs();
+    });
+
+    function checkInputs(){
+      //get values from inputs
+      const firstnameValue = firstname.value.trim();
+      const lastnameValue = lastname.value.trim();
+      const emailValue = email.value.trim();
+      const passwordValue = password.value.trim();
+
+      if(firstnameValue === ''){
+         setErrorFor(firstname,'Fisrt name cannot be empty');
+      } else {
+        // add success error
+        setSuccessFor(fristname);
+      }
+    
+    if(lastnameValue === ''){
+         setErrorFor(lastname,'Last name cannot be empty');
+      } else {
+        // add success error
+        setSuccessFor(lastname);
+      }
+    
+    if(emailValue === ''){
+         setErrorFor(email,'Looks like this is not an email');
+      } else if(!isEmail(emailValue)) {
+        // add success error
+        setErrorFor(email, 'Email is not valid');
+      }else {
+        // add success error
+        setSuccessFor(email);
+      }
+      if(passwordValue === ''){
+         setErrorFor(password,'Fisrt name cannot be empty');
+      } else {
+        // add success error
+        setSuccessFor(password);
+      }
+    }
+    
+    function setErrorFor(input, message){
+      const formControl = input.parentElement;
+      const small = formControl.querySelector('label');
+
+      //add error message
+      small.innerText = message;
+
+      // add error class
+      formControl.className = 'form-control error';
+    }
+
+    function isEmail(email){
+      //return .test(email);
+    }
+    </script>
 </body>
 
 </html>
